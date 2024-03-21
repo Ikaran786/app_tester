@@ -1,0 +1,24 @@
+Location,Secondary-Location,Tertiray-Location,Clinical-History,Predicted-Protocol,Real-Protocol,Correct/Incorrect
+
+MSK,Legs,knees,fell persistant pain,knee,knee,Correct
+MSK,Legs,knees,pain tender suprapatellar area heard snap running,knee,knee,Correct
+MSK,Legs,knees,giving way locking swelling r knee,knee,knee,Correct
+MSK,Legs,knees,medial meniscectomy locking knee tear,knee,knee,Correct
+MSK,Legs,knees,acl tear clinically,knee,knee,Correct
+MSK,Legs,knees,chronic medial pain normal ass meniscal tear pathology,knee,knee,Correct
+MSK,Legs,knees,cliff jump knee injury water,knee,knee,Correct
+MSK,Legs,knees,r knee pain moving standing remote trauma pain year,knee,knee,Correct
+MSK,Legs,knees,previous meniscectomy recurrent buckling tenderness lateral joint line residual tear,knee,knee,Correct
+MSK,Legs,knees,meniscal tear,knee,knee,Correct
+MSK,Legs,Upper legs,enchondroma l femur,btfu,femur,Incorrect
+MSK,Shoulder,Shoulder,fall pain shoulder rc tear,shoulder,shoulder,Correct
+MSK,Shoulder,Shoulder,rotator cuff tear,shoulder,shoulder,Correct
+MSK,Legs,knees,pain month knee give lock swell mcmurray,knee,knee,Correct
+MSK,Shoulder,Shoulder,previous arthroscopic cuff repair chronic pain r shoulder,shoulder,shoulder,Correct
+Neuro,Brain,Brain,r foot discomfort numbness affecting third fourth phlanges morton neuroma,c disc,mortons neuroma,Incorrect
+MSK,Hips,Hips,chronic hip stiffness pain resistant treatment,hip,hip,Correct
+MSK,Legs,knees,previous repair still knee pain,knee,knee,Correct
+MSK,Shoulder,Shoulder,painful r shoulder decreased rom since fall,shoulder,shoulder,Correct
+MSK,Hips,Hips,pain l knee radiates hip hip show cyst side joint,hip,hip,Correct
+MSK,Legs,knees,severe r knee pain position activity induces pain crepitus exam,bilateral knees,bilateral knees,Correct
+Neuro,Brain,Brain,chronic l foot toe numbness rule neuroma lateral r foot pain numbness injury,bilateral mortons neuroma,bilateral mortons neuroma,Correct
