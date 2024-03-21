@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocol Prediction Feedback</title>
+    <style>
+        body {
+            color: rgba(0, 0, 0, 0.87);
+            margin: 0;
+            font-size: 0.875rem;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-weight: 400;
+            line-height: 1.43;
+            letter-spacing: 0.01071em;
+            background-color: #fafafa;
+        }
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fafafa;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: black;
+            font-weight: bold;
+            text-align: center;
+            background-color: #03a9f4; /* Light blue color */
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        input[type="text"], select, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            color: rgba(0, 0, 0, 0.87);
+        }
+        input[type="text"]:focus, select:focus {
+            outline: none;
+        }
+        button {
+            background-color: #3f51b5;
+            color: white;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .jss203 {
+            height: 20vh;
+            display: flex;
+            max-height: 136px;
+            min-height: 96px;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgb(27, 27, 79);
+        }
+        .jss204 {
+            height: 20vh;
+            display: flex;
+            max-height: 136px;
+            min-height: 96px;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgb(27, 27, 79);
+        }
+    </style>
+</head>
+<body>
+    <div class="MuiBox-root jss203">
+        <a class="MuiButtonBase-root MuiButton-root MuiButton-text" tabindex="0" role="button" aria-disabled="false" href="#/apps" style="height: 100%; width: 36vh; min-width: 171px; max-width: 301px; background-image: url(&quot;/static/media/photo.png&quot;); background-position: center center; background-size: contain; background-repeat: no-repeat;">
+            <span class="MuiButton-label"></span>
+            <span class="MuiTouchRipple-root"></span>
+        </a>
+        <div class="MuiBox-root jss204">
+            <div>
+                
+                   <span class="MuiBadge-root" style="margin-right: 113.4px;">
+                        <p class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap" style="color: rgb(255, 255, 255); font-size: clamp(20px, 4vh, 28px);">RDCPS</p>
+                        <span class="MuiBadge-badge MuiBadge-anchorOriginTopRightRectangle MuiBadge-colorSecondary MuiBadge-invisible MuiBadge-dot"></span>
+                    </span>
+
+                    
+                    
+                    <span class="MuiTouchRipple-root">
+                    </span>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Feedback</h1>
+
+        <div class="feedback-box">
+            <p><strong>Location:</strong> {{ location }}</p>
+            <p><strong>Sublocation:</strong> {{ sublocation }}</p>
+            <p><strong>Body Part:</strong> {{ body_part }}</p>
+            <p><strong>Clinical History:</strong> {{ clinical_history }}</p>
+            <p><strong>Predicted Protocol:</strong> {{ predicted_protocol }}</p>
+        </div>
+
+        <form method="post" action="/feedback">
+            <input type="hidden" name="location" value="{{ location }}">
+            <input type="hidden" name="sublocation" value="{{ sublocation }}">
+            <input type="hidden" name="bodypart" value="{{ body_part }}">
+            <input type="hidden" name="clinical_history" value="{{ clinical_history }}">
+            <input type="hidden" name="predicted_protocol" value="{{ predicted_protocol }}">
+
+            <label for="real_protocol">Real Protocol:</label>
+            <input type="text" id="real_protocol" name="real_protocol" value="{{ predicted_protocol }}" required>
+
+            <label for="prediction_correct">Is the prediction correct?</label>
+            <select id="prediction_correct" name="prediction_correct" required>
+                <option value="yes" selected>Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+    
+</body>
+</html>
